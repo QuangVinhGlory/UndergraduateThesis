@@ -1,0 +1,32 @@
+1. Các quy ước đặt tên:
+- Bốn nhãn dữ liệu Black spot, Canker, Greening, Healthy được đặt tên lần lượt là: blackspot, canker, greening, healthy
+- Các phương thức "xóa thông tin" trong đề tài được đặt tên như sau:
+	+ tô đen: black
+	+ bộ lọc trung bình: boxblur
+	+ bộ lọc trung vị: medianblur
+	+ bộ lọc Gauss: gaussblur
+- Kích thước bộ lọc: trừ trường hợp "boxblur.ipynb", "1111" và "5151" lần lượt ký hiệu cho kích thước bộ lọc 11x11 và 51x51, tệp "boxblur.ipynb" là làm mờ với bộ lọc trung bình kích thước 11x11, tệp "boxblur5151.ipynb" là làm mờ với bộ lọc trung bình kích thước 51x51.
+- Các tệp có chữ "im" trong tên ký hiệu cho các thuật toán cải tiến: "im" là thuật toán cải tiến 1, "im2" là thuật toán cải tiến 2.
+
+2. Hướng dẫn sử dụng các tệp mã nguồn:
+- Tệp black.ipynb: mã nguồn cho phương thức tô đen. Để chạy phương thức tô đen cho các mẫu dữ liệu khác nhau, ta thay đổi các chỗ sau trong mã nguồn: 
+	+ prefix = "blackspot_black": các lựa chọn khác thay thế cho blackspot là canker, greening, healthy
+	+ toàn bộ những chỗ có số 5: giữ nguyên nếu chạy cho lớp blackspot, thay thành 29, 46, 55 tương ứng với canker, greening, healthy (ngoại trừ dòng model = load_model('plantUpsampled4.weights.best.hdf5'))
+	
+- Tệp boxblur.ipynb: mã nguồn cho phương thức làm mờ với bộ lọc trung bình. Để chạy phương thức tô đen cho các mẫu dữ liệu khác nhau, ta thay đổi các chỗ sau trong mã nguồn: 
+	+ prefix: tương tự như black.ipynb
+	+ toàn bộ những chỗ có số 5: giữ nguyên nếu chạy cho lớp blackspot, thay thành 29, 46, 55 tương ứng với canker, greening, healthy.
+	+ toàn bộ những chỗ có class_to_explain = 0, thay số gán thành 1, 2, 3 tương ứng với canker, greening và healthy.
+
+- Các tệp còn lại có thao tác tương tự.
+
+3. Ví dụ:
+Giả sử cần thực nghiệm bộ lọc làm mờ trung vị với kích thước 51x51 cho mẫu dữ liệu Healthy, những thao tác cần làm:
+	- Sử dụng tệp medianblur5151.ipynb
+	- Thay prefix = "blackspot_medianblur5151" thành prefix = "healthy_medianblur5151"
+	- Thay tất cả những chỗ có số 5 (liên quan đến blackspot) thành 55 (cho lớp healthy)
+	- Gán lại tất cả những chỗ class_to_explain = 0 thành class_to_explain = 3
+
+4. Thực thi và kết quả:
+- Ấn nút "Run All"
+- Có thể xem kết quả được in ra trực tiếp trên notebook hoặc trong results.zip được nén.

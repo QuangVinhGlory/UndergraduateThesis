@@ -1,0 +1,13 @@
+1. Yêu cầu về môi trường và công cụ:
+- Trình duyệt web: Google Chrome, Firefox, Microsoft edge, ...
+- Tài khoản Google (để sử dụng Google Colab và Google Drive)
+
+2. Chuẩn bị tệp tin mã nguồn:
+- Tệp mã nguồn: sử dung một trong những tệp ipynb (mỗi tệp tương ứng với một tinh chỉnh riêng trong đề tài)
+- Thư viện: toàn bộ các gói thư viện đều sử dụng hệ sinh thái có sẵn của Google Colab hoặc tự động tải vào bộ nhớ ngay trong các Cell khởi tạo đầu tiên của chương trình.
+
+3. Quy trình triển khai:
+- Bước 1: Mở trình duyệt web và truy cập trang chủ Google colab tại địa chỉ: https://colab.research.google.com/
+- Bước 2: Tại hộp thoại Open notebook xuất hiện trên màn hình, chọn thẻ Upload.
+- Bước 3: Nhấn nút Browse hoặc kéo thả tệp .ipynb vào khu vực tải lên.
+- Bước 4: Chờ hệ thống tải tệp lên hoàn tất. Giao diện Notebook làm việc sẽ tự động mở ra và sẵn sàng cho việc thực thi.
